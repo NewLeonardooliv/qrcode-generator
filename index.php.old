@@ -1,0 +1,16 @@
+<?php
+
+include "./phpqrcode/qrlib.php";
+
+$dados = "https://similar-movies-ai.vercel.app/";
+
+
+$tamanho = 10;
+$nivelCorrecao = 'L';
+$imagemType = 'png';
+
+$caminhoImagem = './qrcode.png';
+
+QRcode::png($dados, $caminhoImagem, $nivelCorrecao, $tamanho, 2);
+
+echo '<img src="' . $caminhoImagem . '" alt="QR Code">';
